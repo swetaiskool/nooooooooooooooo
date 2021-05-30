@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <link src="stylesheet" href="main.css">
+<head>
+    <style>
+  
+        * {
+            padding: 0;
+            margin: 0;
+        }
+  
+
+        .container {
+            height: 100vh;
+            width: 100%;
+            background-image: url(
+'https://miro.medium.com/max/3002/1*dP81IJq-tGFxy1rIK3RYsg.png');
+              
+
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+  
+        .nav li {
+            float: right;
+            list-style: none;
+        }
+  
+        .nav a {
+            list-style: none;
+            height: 50px;
+            line-height: 50px;
+            font-size: 20px;
+            font-weight: 550;
+            display: block;
+            padding: 5px 35px;
+            color: white;
+            text-decoration: none;
+            font-family:sans-serif;
+        }
+  
+        .content {
+            width: 100%;
+            position: absolute;
+            top: 45%;
+        }
+  
+        .left-col {
+            margin-left: 11%;
+        }
+  
+        .left-col h1 {
+            font-size: 50px;
+            color: rgb(226, 117, 139);
+        }
+        button{
+            width: 50px;
+            height: 50px;
+            border-radius: 15px;
+            background-color: brown;
+            font-size: 14px;
+            color: white;
+        }
+        button:hover
+        {
+            cursor: pointer;
+        }
+        .right-col {
+            float: right;
+            margin-right: 10%;
+            margin-top: -5%;
+            display: flex;
+            align-items: center;
+        }
+        .right-col p {
+            font-size: 21px;
+            color: black;
+            font-weight: 650;
+            margin-right: 20px;
+        }
+        #icon {
+            cursor: pointer;
+        }
+        #colorchanged{
+            color: white;
+            font-family: sans-serif;
+        }
+        #opace{
+            opacity: 0.8;
+            transition: opacity .4s;
+        }
+        #opace:hover
+        {
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="left-col">
+            <h1>BEAT <br> PLAY</h1>
+        </div>
+        <div class="right-col">
+            <p id="colorchanged">Click Here To Listen</p>
+            <button onclick="nextpage()" id="opace">Start</button>
+        </div>
+    </div>
+    <audio id="mysound">
+        <source src="media/music.mp3" type="audio/mp3">
+    </audio>
+    <script>
+        var mysound = document.getElementById("mysound");
+        function nextpage() {
+            window.location = "mainpage.html";
+        }
+    </script>
+</body>
+  
+</html>
